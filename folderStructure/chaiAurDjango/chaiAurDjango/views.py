@@ -1,4 +1,6 @@
 from django.http import JsonResponse
+from django.shortcuts import render
+
 
 def home(request):
     data = {
@@ -16,3 +18,7 @@ def about(request):
 
 def contact(request):
     return JsonResponse({"name": "chai aur code contact"})
+
+
+def template(request):
+    return render(request,"index.html")
